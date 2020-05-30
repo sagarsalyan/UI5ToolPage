@@ -16,7 +16,11 @@ sap.ui.define([
 		onMenuPress: function(){
 			var oToolPage = this.byId("toolPage");
 			oToolPage.setSideExpanded(!oToolPage.getSideExpanded());
-		}
+		},
+		onItemSelect: function (oEvent) {
+			var oItem = oEvent.getParameter("item");
+			this.byId("pageContainer").to(this.getView().createId(oItem.getKey()));
+		},
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

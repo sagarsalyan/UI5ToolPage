@@ -67,8 +67,10 @@
 			</tnt:ToolHeader>
 		</tnt:header>
 		<tnt:sideContent>
-			<tnt:SideNavigation id="sideNavigation" selectedKey="subItem3" class="side-navigation-demo">
+			<tnt:SideNavigation id="sideNavigation" itemSelect="onItemSelect" selectedKey="item2" class="side-navigation-demo">
 				<tnt:NavigationList>
+					<tnt:NavigationListItem text="Page 1" key = "page1" icon="sap-icon://employee"/>
+					<tnt:NavigationListItem text="Page 2" key = "page2" id="item2" icon="sap-icon://employee"/>
 					<tnt:NavigationListItem text="Item 1" icon="sap-icon://employee">
 						<tnt:NavigationListItem text="Sub Item 1"/>
 						<tnt:NavigationListItem text="Sub Item 2"/>
@@ -92,7 +94,24 @@
 			</tnt:SideNavigation>
 		</tnt:sideContent>
 		<tnt:mainContents>
-			<Text text="Content goes here"></Text>
+			<NavContainer id="pageContainer" initialPage="page2">
+				<pages>
+					<ScrollContainer
+						id="page1"
+						horizontal="false"
+						vertical="true"
+						height="100%">
+						<Text text="This is the page1" />
+					</ScrollContainer>
+					<ScrollContainer
+						id="page2"
+						horizontal="false"
+						vertical="true"
+						height="100%">
+						<Text text="This is the page2" />
+					</ScrollContainer>
+				</pages>
+			</NavContainer>	
 		</tnt:mainContents>
 	</tnt:ToolPage>
 </mvc:View>
