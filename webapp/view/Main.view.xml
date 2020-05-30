@@ -1,0 +1,98 @@
+<mvc:View controllerName="App.ToolPage.controller.Main" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:tnt="sap.tnt" height="100%">
+	<tnt:ToolPage id="toolPage">
+		<tnt:header>
+			<tnt:ToolHeader>
+				<Button icon="sap-icon://menu2" type="Transparent" press="onMenuPress">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow"/>
+					</layoutData>
+				</Button>
+				<MenuButton text="File" type="Transparent">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</MenuButton>
+				<MenuButton text="Edit" type="Transparent" enabled="false">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</MenuButton>
+				<MenuButton text="View" type="Transparent">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</MenuButton>
+				<MenuButton text="Navigate" type="Transparent">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</MenuButton>
+				<Button text="Code" type="Transparent">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</Button>
+				<MenuButton text="Refactor" type="Transparent">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</MenuButton>
+				<MenuButton text="Run" type="Transparent">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</MenuButton>
+				<MenuButton text="Tools" type="Transparent">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</MenuButton>
+				<tnt:ToolHeaderUtilitySeparator/>
+				<ToolbarSpacer>
+					<layoutData>
+						<OverflowToolbarLayoutData minWidth="20px"/>
+					</layoutData>
+				</ToolbarSpacer>
+				<SearchField width="240px">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow"/>
+					</layoutData>
+				</SearchField>
+				<Button text="Alan Smith" type="Transparent" press=".onUserNamePress">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow"/>
+					</layoutData>
+				</Button>
+			</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:sideContent>
+			<tnt:SideNavigation id="sideNavigation" selectedKey="subItem3" class="side-navigation-demo">
+				<tnt:NavigationList>
+					<tnt:NavigationListItem text="Item 1" icon="sap-icon://employee">
+						<tnt:NavigationListItem text="Sub Item 1"/>
+						<tnt:NavigationListItem text="Sub Item 2"/>
+						<tnt:NavigationListItem text="Sub Item 3" id="subItem3" key="subItem3"/>
+						<tnt:NavigationListItem text="Sub Item 4"/>
+					</tnt:NavigationListItem>
+					<tnt:NavigationListItem text="Item 2" icon="sap-icon://building">
+						<tnt:NavigationListItem text="Sub Item 1"/>
+						<tnt:NavigationListItem text="Sub Item 2"/>
+						<tnt:NavigationListItem text="Sub Item 3"/>
+						<tnt:NavigationListItem text="Sub Item 4"/>
+					</tnt:NavigationListItem>
+				</tnt:NavigationList>
+				<tnt:fixedItem>
+					<tnt:NavigationList>
+						<tnt:NavigationListItem text="Item 1" icon="sap-icon://employee"/>
+						<tnt:NavigationListItem text="Item 2" icon="sap-icon://building"/>
+						<tnt:NavigationListItem text="Item 3" icon="sap-icon://card"/>
+					</tnt:NavigationList>
+				</tnt:fixedItem>
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<Text text="Content goes here"></Text>
+		</tnt:mainContents>
+	</tnt:ToolPage>
+</mvc:View>
