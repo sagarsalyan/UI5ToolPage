@@ -1,5 +1,5 @@
 <mvc:View controllerName="App.ToolPage.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-	<Shell id="shell">
+	<Shell id="shell" appWidthLimited="false">
 		<App id="app">
 			
 		</App>

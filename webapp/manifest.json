@@ -32,6 +32,9 @@
 	},
 	"sap.ui5": {
 		"flexEnabled": false,
+		"config": {
+			"fullWidth": true
+		},
 		"rootView": {
 			"viewName": "App.ToolPage.view.App",
 			"type": "XML",
